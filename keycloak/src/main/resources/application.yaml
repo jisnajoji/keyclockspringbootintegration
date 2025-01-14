@@ -1,0 +1,14 @@
+server:
+  port: 8081
+spring:
+  security:
+    outh2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8080/realms/jisna
+          jwk-set-uri: http://localhost:8080/realms/jisna/protocol/openid-connect/certs
+jwt:
+  auth:
+    converter:
+      resource-id: jisna-rest-api
+      principle-attribute: preferred_username
